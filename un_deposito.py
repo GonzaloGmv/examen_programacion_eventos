@@ -1,3 +1,4 @@
+
 from gasolinera import Gasolinera
 
 def undeposito():
@@ -13,7 +14,9 @@ def undeposito():
             tiempo_pagar = gasolinera.pagar()
             tiempo_total = tiempo_llenar + tiempo_pagar
             tiempos.append(tiempo_total)
+            # Si al pasar los 15 minutos, el último coche no ha terminado de repostar, se le deja terminar
             if sum(tiempos)>=15:
                 break
     print('Han repostado {} coches'.format(len(tiempos)))
     print('La media de tiempo de repostaje es de {} minutos'.format(sum(tiempos)/len(tiempos)))
+    

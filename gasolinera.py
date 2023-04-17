@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 class Gasolinera:
     def __init__(self):
@@ -31,6 +32,7 @@ class Gasolinera:
         elif surtidor == 3:
             self.surtidor4 = False
         duracion = random.randrange(5,10)
+        sleep(duracion/10)
         print('Depósito lleno')
         if surtidor == 0:
             self.surtidor1 = True
@@ -45,6 +47,7 @@ class Gasolinera:
     def pagar(self):
         if self.caja == True:
             self.caja = False
+            sleep(0.3)
             print('Pago realizado')
             self.caja = True
             return 3
