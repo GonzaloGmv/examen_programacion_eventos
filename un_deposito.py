@@ -17,5 +17,3 @@ def undeposito():
                 break
     print('Han repostado {} coches'.format(len(tiempos)))
     print('La media de tiempo de repostaje es de {} minutos'.format(sum(tiempos)/len(tiempos)))
-
-undeposito()
