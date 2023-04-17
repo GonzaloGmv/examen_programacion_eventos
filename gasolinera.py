@@ -1,4 +1,3 @@
-from time import sleep
 import random
 
 class Gasolinera:
@@ -20,7 +19,7 @@ class Gasolinera:
         if libre == True:
             return i
         else:
-            return 0
+            return -1
 
     def llenar_deposito(self, surtidor):
         if surtidor == 0:
@@ -32,7 +31,6 @@ class Gasolinera:
         elif surtidor == 3:
             self.surtidor4 = False
         duracion = random.randrange(5,10)
-        sleep(duracion/10)
         print('Depósito lleno')
         if surtidor == 0:
             self.surtidor1 = True
@@ -42,11 +40,12 @@ class Gasolinera:
             self.surtidor3 = True
         elif surtidor == 3:
             self.surtidor4 = True
+        return duracion
 
     def pagar(self):
         if self.caja == True:
             self.caja = False
-            sleep(0,3)
             print('Pago realizado')
             self.caja = True
+            return 3
 
