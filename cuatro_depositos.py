@@ -14,12 +14,5 @@ def cuatrodeps():
         surtidores_libres = gasolinera.comprobar_surtidor()
         if surtidores_libres != -1:
             hilos = []
-            for surtidor in surtidores_libres:
-                hilo = Thread(target=gasolinera.llenar_deposito, args=(surtidor,))
-                hilo.start()
-                hilos.append(hilo)
-            for hilo in hilos:
-                hilo.join()
-            gasolinera.pagar()
-
+# NO ESTA ACABADO
 cuatrodeps()
